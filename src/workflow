@@ -1,0 +1,17 @@
+Description
+
+A blog app that users can access to different parts according to their roles. (Role management)
+
+    - Users (not logged in) can visit the website and read the blogs.
+    - Bloggers can access to admin panel and can see, edit, delete own blogs and have CRUD authentrization but doesnot have CRUD power on categories
+    - Superadmin has CRUD power on all blogs, categories and users.
+
+Tasks
+    1. Dependencies:
+        - json-server +
+        - axios
+        - react router dom
+        - reduc, react-redux +
+            states: blogsState, categoriesState, usersState, "loginState"
+        - UI: bootstrap for react, bootstarp
+    3. Project Basis
