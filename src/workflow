@@ -8,10 +8,13 @@ A blog app that users can access to different parts according to their roles. (R
 
 Tasks
     1. Dependencies:
-        - json-server +
+        - json-server 
         - axios
+            as instance : api, urls
         - react router dom
         - reduc, react-redux +
-            states: blogsState, categoriesState, usersState, "loginState"
+            states: blogsState, categoriesState, usersState, loginState.
         - UI: bootstrap for react, bootstarp
-    3. Project Basis
+    2. Project Basis
+        - fetching data
+            custom hook (BlogFetch, CategorieFetch, UserFetch )
