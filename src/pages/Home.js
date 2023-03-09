@@ -1,10 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 
 const Home = () =>{
+   
+   
     
     return(
-        <div>home</div>
+        <div>home
+        </div>
+        
     )
 }
 

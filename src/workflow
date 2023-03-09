@@ -16,5 +16,6 @@ Tasks
             states: blogsState, categoriesState, usersState, loginState.
         - UI: bootstrap for react, bootstarp
     2. Project Basis
-        - fetching data
-            custom hook (BlogFetch, CategorieFetch, UserFetch )
+        - fetching data - app.js, useEffect
+            custom hook (BlogFetch, CategorieFetch, UserFetch) ???
+        -login 

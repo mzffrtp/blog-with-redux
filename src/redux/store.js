@@ -6,8 +6,8 @@ import usersReducer from "./reducers/usersReducer";
 import loginReducer from  "./reducers/loginReducer"
 
 const rootReducer = combineReducers({
-    blogsState:blogsReducer,
-    categoriesState:categoriesReducer,
+    blogsState: blogsReducer,
+    categoriesState: categoriesReducer,
     usersState: usersReducer,
     loginState: loginReducer
 })

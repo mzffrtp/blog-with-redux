@@ -9,10 +9,11 @@ const initialState = {
 }
 
 const categoriesReducer = (state= initialState, action)=>{
-    switch (action.types) {
+    switch (action.type) {
         case ActionTypes.categoryActions.GET_CATEGORY_START:
         return {
             ...state,
+            pending:false
         }
 
         case ActionTypes.categoryActions.GET_CATEGORY_SUCCESS:
