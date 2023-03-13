@@ -11,6 +11,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 /* pages */
 import Home from "./pages/Home";
 import AdminHome from "./pages/AdminHome";
+import Login from "./pages/Login";
 
 /* api */
 import api from "./api/api";
@@ -74,14 +75,10 @@ function App() {
   }, [dispatch]);
 
   
- /* if (!blogsState.success || !categoriesState.success || !usersState.success) return null; */
-  
+ if (!blogsState.success || !categoriesState.success || !usersState.success) return null;
 
-  /* todo: return error page if data not fetched
-
-  if(blogsState.error || categoriesState.error || useState.error)
-  return */
-
+  /* if(blogsState.error || categoriesState.error || usersState.error)
+  return null */
 
 
   return (
@@ -89,6 +86,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<AdminHome />} />
+        <Route path="/login" element={<Login />} />
+
       </Routes>
     </BrowserRouter>
   );
