@@ -34,6 +34,7 @@ const loginReducer = (state = initialState, action) => {
             }
         
             case ActionTypes.loginActions.LOGOUT:
+                localStorage.setItem("loginState", JSON.stringify(initialState))
                 return initialState
         default:
             return state

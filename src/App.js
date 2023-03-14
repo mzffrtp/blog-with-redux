@@ -8,6 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 /* routing */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+/* component */
+import GeneralModal from "./components/generalModal"
+
 /* pages */
 import Home from "./pages/Home";
 import AdminHome from "./pages/AdminHome";
@@ -72,13 +75,37 @@ function App() {
           payload:"An error occured during fetching!"
         })
       })
-  }, [dispatch]);
+      /* read loginstate from localstorage*/
+      const loginStateFromLocalstorage = JSON.parse(
+        localStorage.getItem("loginState"));
+
+      if (loginStateFromLocalstorage === null){
+        localStorage.setItem(
+          "loginState", JSON.stringify(
+            {pending:false,
+            success:false,
+            error:false,
+            errorMessage:"",
+            user:null,
+          })
+        )} else {
+          if(loginStateFromLocalstorage.success){
+            dispatch({
+              type:ActionTypes.loginActions.LOGIN_SUCCESS,
+              payload:loginStateFromLocalstorage.user
+            })
+          }
+        }
+  }, []);
 
   
  if (!blogsState.success || !categoriesState.success || !usersState.success) return null;
 
-  /* if(blogsState.error || categoriesState.error || usersState.error)
-  return null */
+  if(blogsState.error || categoriesState.error || usersState.error)
+  return <GeneralModal
+  title = "Error"
+  content = "An error occured during fetching data"
+  />
 
 
   return (

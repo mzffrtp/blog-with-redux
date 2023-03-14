@@ -1,15 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import Header from "../components/header";
+import CategoriesSection from "../components/CategoriesSection";
+
+const Home = () => {
 
 
-const Home = () =>{
-   
-   
-    
-    return(
-        <div>home
+    return (
+        <div>
+            <Header />
+            <CategoriesSection />
         </div>
-        
+
     )
 }
 
